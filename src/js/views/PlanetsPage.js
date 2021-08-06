@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-export function PeoplePage() {
+export function PlanetsPage() {
 	const [color, setColor] = React.useState("green");
 	const [people, setPeople] = useState([]);
 
 	useEffect(() => {
-		fetch("https://www.swapi.tech/api//people/:id")
+		fetch("https://www.swapi.tech/api//planets/:id")
 			.then(res => {
 				return res.json();
 			})

@@ -6,6 +6,8 @@ import { Home } from "./views/home";
 import { PeopleList } from "./views/PeopleList";
 import { PeoplePage } from "./views/PeoplePage";
 import injectContext from "./store/appContext";
+import { PlanetsList } from "./views/PlanetsList";
+import { PlanetsPage } from "./views/PlanetsPage";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -30,6 +32,12 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/people/:id">
 							<PeoplePage />
+						</Route>
+						<Route exact path="/planets">
+							<PlanetsList />
+						</Route>
+						<Route exact path="/planets/:id">
+							<PlanetsPage />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>

@@ -11,10 +11,16 @@ export const Navbar = () => {
 			</Link>
 			<div className="ml-auto">
 				<Link to="/people">
-					<button className="btn btn-primary">People List</button>
+					<button className="btn btn-primary">Galaxy&apos;s Characters</button>
 				</Link>
 				<Link to="/people/:id">
-					<button className="btn btn-primary">People Page</button>
+					<button className="btn btn-primary">Character Profile</button>
+				</Link>
+				<Link to="/planets">
+					<button className="btn btn-primary">Planets</button>
+				</Link>
+				<Link to="/planets/:id">
+					<button className="btn btn-primary">Planet Details</button>
 				</Link>
 			</div>
 		</nav>
