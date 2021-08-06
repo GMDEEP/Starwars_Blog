@@ -7,7 +7,9 @@ export function PeopleList() {
 
 	useEffect(() => {
 		fetch("https://www.swapi.tech/api/people")
-			.then(res => res.json())
+			.then(res => {
+				return res.json();
+			})
 			.then(data => {
 				setPeople(data.results);
 			});
