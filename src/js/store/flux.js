@@ -21,9 +21,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
-			loadSomeData: () => {
-				getActions().fetchPeopleList();
-			},
+			loadSomeData: () => {},
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
@@ -37,15 +35,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
-			},
-			fetchPeopleList: () => {
-				fetch(`${apiUrl}/people`)
-					.then(function(response) {
-						setStore({ peopleListArray: response });
-					})
-					.catch(function(error) {
-						console.log("Oh No! There was a problem: \n", error);
-					});
 			}
 		}
 	};

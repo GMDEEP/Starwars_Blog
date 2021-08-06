@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export function PeoplePage() {
 	const [color, setColor] = React.useState("green");
+
+	//     useEffect(() => {
+	// fetch("https://www.swapi.tech/api/")
+	//     }, []);
 
 	return (
 		<div className="row">
@@ -23,9 +27,6 @@ export function PeoplePage() {
 						<p className="card-text">
 							With supporting text below as a natural lead-in to additional content.
 						</p>
-						<a href="#" className="btn btn-primary">
-							Go somewhere
-						</a>
 					</div>
 				</div>
 			</div>
