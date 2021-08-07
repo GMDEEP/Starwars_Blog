@@ -20,7 +20,7 @@ export function PeoplePage() {
 				<div className="card">
 					<div className="card-body">
 						<img
-							src="https://via.placeholder.com/800x600.png?text=Stewart"
+							src="https://th.bing.com/th/id/R.68df54532e6c0e96c97ed5c50a2d8647?rik=DO5an3wtY8d1HA&riu=http%3a%2f%2fdiskingdom.com%2fwp-content%2fuploads%2f2015%2f12%2fIMG_3950.jpg&ehk=ATdu0YhsVvZL8VFGXEiibMdUB8YhTlwkvBUXFpEIDYU%3d&risl=&pid=ImgRaw&r=0"
 							className="card-img-top"
 							alt="..."
 						/>

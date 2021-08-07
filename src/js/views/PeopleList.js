@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import { FavoriteContext } from "../component/favoriteList";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 export function PeopleList() {
 	const [color, setColor] = useState("green");
@@ -35,7 +36,7 @@ export function PeopleList() {
 									card&apos;s content.
 								</p>
 								<a href="#" className="btn btn-primary">
-									Go somewhere
+									Character
 								</a>
 								{favorites.favoriteArray.includes(person.name) ? (
 									<button
