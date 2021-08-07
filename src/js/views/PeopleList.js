@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { FavoriteContext } from "../component/favoriteList";
 
 export function PeopleList() {
 	const [color, setColor] = useState("green");
 	// let abc = [{ name: "value1" }, { name: "value2" }, { name: "value3" }];
 	const [people, setPeople] = useState([]);
+	const favorites = useContext(FavoriteContext);
 
 	useEffect(() => {
 		fetch("https://www.swapi.tech/api/people")
@@ -35,6 +37,24 @@ export function PeopleList() {
 								<a href="#" className="btn btn-primary">
 									Go somewhere
 								</a>
+								{favorites.favoriteArray.includes(person.name) ? (
+									<button
+										className="btn btn-outline-primary"
+										onClick={() => {
+											const newArray = favorites.favoriteArray;
+											favorites.setFavoriteArray(newArray.filter(fav => fav !== person.name));
+										}}>
+										Delete
+									</button>
+								) : (
+									<button
+										className="btn btn-primary"
+										onClick={() =>
+											favorites.setFavoriteArray([...favorites.favoriteArray, person.name])
+										}>
+										Like
+									</button>
+								)}
 							</div>
 						</div>
 					</div>
