@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
+import { FavoriteContext } from "../component/favoriteList";
 
 export const Navbar = () => {
+	const [showMenu, setShowMenu] = useState("");
+	const favorites = useContext(FavoriteContext);
+
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			<Link to="/">
@@ -25,13 +29,14 @@ export const Navbar = () => {
 				</Link>
 			</div>
 			<div className="dropdown">
-				{/* openDropDown=() => {
-                    let value = "dropdown open";
-                    if(this.state.openDropDown === "dropdown open"){
-                        value = "dropdown";
-                    }
-                } */}
 				<button
+					onClick={e => {
+						if (showMenu == "") {
+							setShowMenu("show");
+						} else {
+							setShowMenu("");
+						}
+					}}
 					className="btn btn-primary dropdown-toggle"
 					type="button"
 					id="dropdownMenuButton1"
@@ -39,22 +44,16 @@ export const Navbar = () => {
 					ariaExpanded="false">
 					Dropdown button
 				</button>
-				<ul className="dropdown-menu" ariaLabelledBy="dropdownMenuButton1">
-					<li>
-						<a className="dropdown-item" href="#">
-							Action
-						</a>
-					</li>
-					<li>
-						<a className="dropdown-item" href="#">
-							Another action
-						</a>
-					</li>
-					<li>
-						<a className="dropdown-item" href="#">
-							Something else here
-						</a>
-					</li>
+				<ul className={"dropdown-menu" + showMenu} ariaLabelledBy="dropdownMenuButton1">
+					{favorites.favoriteArray.map((fav, index) => {
+						return (
+							<li key={index}>
+								<a className="dropdown-item" href="#">
+									{fav}
+								</a>
+							</li>
+						);
+					})}
 				</ul>
 			</div>
 		</nav>

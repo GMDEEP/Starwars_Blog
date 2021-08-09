@@ -30,13 +30,10 @@ export function PeopleList() {
 								alt="..."
 							/>
 							<div className="card-body">
-								<h5 className="card-title">Name</h5>
-								<p className="card-text">
-									Some quick example text to build on the card title and make up the bulk of the
-									card&apos;s content.
-								</p>
-								<a href="#" className="btn btn-primary">
-									Character
+								<h5 className="card-title">{person.name}</h5>
+								<p className="card-text">{person.url}</p>
+								<a href={"/people/" + person.uid} className="btn btn-primary">
+									Character Profile
 								</a>
 								{favorites.favoriteArray.includes(person.name) ? (
 									<button
