@@ -4,7 +4,6 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 export function PeopleList() {
 	const [color, setColor] = useState("green");
-	// let abc = [{ name: "value1" }, { name: "value2" }, { name: "value3" }];
 	const [people, setPeople] = useState([]);
 	const favorites = useContext(FavoriteContext);
 

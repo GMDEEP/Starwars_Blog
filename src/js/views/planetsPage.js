@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 export function PlanetsPage() {
 	const [color, setColor] = React.useState("green");
-	const [people, setPeople] = useState([]);
+	const [planets, setPlanets] = useState([]);
+	const { id } = useParams();
 
 	useEffect(() => {
-		fetch("https://www.swapi.tech/api//planets/:id")
+		fetch("https://www.swapi.tech/api//planets/" + id)
 			.then(res => {
 				return res.json();
 			})
 			.then(data => {
-				setPeople(data.results);
+				setPlanets(data.results);
 			});
 	}, []);
 
@@ -30,10 +32,8 @@ export function PlanetsPage() {
 			<div className="col-sm-6">
 				<div className="card">
 					<div className="card-body">
-						<h5 className="card-title">Special title treatment</h5>
-						<p className="card-text">
-							With supporting text below as a natural lead-in to additional content.
-						</p>
+						<h5 className="card-title">Name</h5>
+						<p className="card-text">Hello</p>
 					</div>
 				</div>
 			</div>
