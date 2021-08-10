@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
 import { FavoriteContext } from "../component/favoriteList";
+import "../../styles/home.scss";
 
 export const Navbar = () => {
 	const [showMenu, setShowMenu] = useState("");

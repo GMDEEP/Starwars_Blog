@@ -3,11 +3,11 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
-import { PeopleList } from "./views/PeopleList";
-import { PeoplePage } from "./views/PeoplePage";
+import { PeopleList } from "./views/peopleList";
+import { PeoplePage } from "./views/peoplePage";
 import injectContext from "./store/appContext";
-import { PlanetsList } from "./views/PlanetsList";
-import { PlanetsPage } from "./views/PlanetsPage";
+import { PlanetsList } from "./views/planetsList";
+import { PlanetsPage } from "./views/planetsPage";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
