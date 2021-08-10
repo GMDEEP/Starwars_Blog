@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { FavoriteContext } from "../component/favoriteList";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 export function PlanetsList() {
 	const [color, setColor] = useState("green");
-	// let abc = [{ name: "value1" }, { name: "value2" }, { name: "value3" }];
-	const [people, setPeople] = useState([]);
+	const [planets, setPlanets] = useState([]);
+	const favorites = useContext(FavoriteContext);
 
 	useEffect(() => {
 		fetch("https://www.swapi.tech/api/planets")
@@ -11,13 +13,13 @@ export function PlanetsList() {
 				return res.json();
 			})
 			.then(data => {
-				setPeople(data.results);
+				setPlanets(data.results);
 			});
 	}, []);
 
 	return (
 		<div className="row">
-			{people.map((person, i) => {
+			{planets.map((planets, i) => {
 				return (
 					<div className="col" key={i}>
 						<div className="card" style={{ width: "18rem" }}>
@@ -35,6 +37,24 @@ export function PlanetsList() {
 								<a href="#" className="btn btn-primary">
 									Go somewhere
 								</a>
+								{favorites.favoriteArray.includes(planets.name) ? (
+									<button
+										className="btn btn-outline-primary"
+										onClick={() => {
+											const newArray = favorites.favoriteArray;
+											favorites.setFavoriteArray(newArray.filter(fav => fav !== planets.name));
+										}}>
+										Delete
+									</button>
+								) : (
+									<button
+										className="btn btn-primary"
+										onClick={() =>
+											favorites.setFavoriteArray([...favorites.favoriteArray, planets.name])
+										}>
+										Like
+									</button>
+								)}
 							</div>
 						</div>
 					</div>
