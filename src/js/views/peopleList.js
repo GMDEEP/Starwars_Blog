@@ -49,7 +49,7 @@ export function PeopleList() {
 										onClick={() =>
 											favorites.setFavoriteArray([...favorites.favoriteArray, person.name])
 										}>
-										Like
+										<i className="far fa-heart" />
 									</button>
 								)}
 							</div>

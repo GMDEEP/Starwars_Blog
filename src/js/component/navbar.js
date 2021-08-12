@@ -9,13 +9,15 @@ export const Navbar = () => {
 	const favorites = useContext(FavoriteContext);
 
 	return (
-		<nav className="d-flex justify-content-center navbar navbar-light bg-light mb-3">
+		<nav className=" navbar navbar-light bg-light mb-3">
 			<Link to="/">
-				<span className="d-flex justify-content-center navbar-brand mb-0 h1">
-					<img src="https://th.bing.com/th/id/OIP.x5pcPIJR6arF1M6EFTGMLgHaFj?pid=ImgDet&rs=1" />
+				<span className="d-flex justify-content-start navbar-brand mb-0 h1">
+					<img src="https://compass-ssl.xboxlive.com/assets/67/1c/671c739e-386a-4df3-9774-30e9e46eb53a.jpg?n=MSXC-StarWarsTitle-HeroAndImageCard-large-l-150x75-16x9-01.jpg" />
 				</span>
 			</Link>
-			{/* <div className="ml-auto">
+			{/*BUTTONS TO PAGES
+            
+            <div className="ml-auto">
 				<Link to="/people">
 					<button className="btn btn-primary">Galaxy&apos;s Characters</button>
 				</Link>

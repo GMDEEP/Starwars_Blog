@@ -6,18 +6,24 @@ import { PlanetsList } from "./planetsList";
 import { VehicleList } from "./vehicleList";
 
 export const Home = () => (
-	<div dataBsSpy="scroll" className="text-center mt-5">
-		<h1>Galaxy Characters</h1>
-		<div className="col-12 mt-5 mb-5">
-			<PeopleList />
+	<div className="container-fluid horizontal-scrollable">
+		<h1 className="text-center mt-5">Galaxy Characters</h1>
+		<div className="row flex-row flex-nowrap">
+			<div className="col-12 mt-5">
+				<PeopleList />
+			</div>
 		</div>
-		<h1>Somewhere far far away</h1>
-		<div className="col-12 mt-5 mb-5">
-			<PlanetsList />
+		<h1 className="text-center mt-5">Galaxy Characters</h1>
+		<div className="row flex-row flex-nowrap">
+			<div className="col-12 mt-5 ">
+				<PlanetsList />
+			</div>
 		</div>
-		<h1>Spacecraft</h1>
-		<div className="col-12 mt-5 mb-5">
-			<VehicleList />
+		<h1 className="text-center mt-5">Galaxy Characters</h1>
+		<div className="row flex-row flex-nowrap">
+			<div className="col-12 mt-5 ">
+				<VehicleList />
+			</div>
 		</div>
 	</div>
 );
