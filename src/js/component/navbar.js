@@ -28,6 +28,12 @@ export const Navbar = () => {
 				<Link to="/planets/:id">
 					<button className="btn btn-primary">Planet Details</button>
 				</Link>
+				<Link to="/vehicle/">
+					<button className="btn btn-primary">Vehicle Details</button>
+				</Link>
+				<Link to="/vehicle/:id">
+					<button className="btn btn-primary">Vehicle Details</button>
+				</Link>
 			</div>
 			<div className="dropdown">
 				<button

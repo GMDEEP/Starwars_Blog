@@ -32,7 +32,7 @@ export function PeopleList() {
 								<h5 className="card-title">{person.name}</h5>
 								<p className="card-text">{person.url}</p>
 								<a href={"/people/" + person.uid} className="btn btn-primary">
-									Character Profile
+									Profile
 								</a>
 								{favorites.favoriteArray.includes(person.name) ? (
 									<button
