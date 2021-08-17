@@ -13,7 +13,7 @@ export const Home = () => (
 				<PeopleList />
 			</div>
 		</div>
-		<h1 className="text-center mt-5">Galaxy Characters</h1>
+		<h1 className="text-center mt-5 light">Galaxy Characters</h1>
 		<div className="row flex-row flex-nowrap">
 			<div className="col-12 mt-5 ">
 				<PlanetsList />
