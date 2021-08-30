@@ -7,12 +7,12 @@ export function VehiclePage() {
 	const { id } = useParams();
 
 	useEffect(() => {
-		fetch("https://www.swapi.tech/api/starships/" + id)
+		fetch("https://3000-aquamarine-mink-o3qq0p5g.ws-us16.gitpod.io/vehicle" + id)
 			.then(res => {
 				return res.json();
 			})
 			.then(data => {
-				setPerson(data.result);
+				setPerson(data);
 			});
 	}, []);
 

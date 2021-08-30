@@ -7,12 +7,12 @@ export function PeoplePage() {
 	const { id } = useParams();
 
 	useEffect(() => {
-		fetch("https://www.swapi.tech/api/people/" + id)
+		fetch("https://3000-aquamarine-mink-o3qq0p5g.ws-us16.gitpod.io/people/" + id)
 			.then(res => {
 				return res.json();
 			})
 			.then(data => {
-				setPerson(data.result);
+				setPerson(data);
 			});
 	}, []);
 
@@ -28,8 +28,8 @@ export function PeoplePage() {
 			<div className="col-sm-6">
 				<div className="card">
 					<div className="card-body">
-						<h5 className="card-title">{person.properties ? person.properties.name : "...name"}</h5>
-						<p className="card-text">{person.description}</p>
+						<h5 className="card-title">{person ? person.name : "...name"}</h5>
+						<p className="card-text">{person.birth_year}</p>
 					</div>
 				</div>
 			</div>

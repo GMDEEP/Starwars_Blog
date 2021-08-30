@@ -7,12 +7,12 @@ export function PlanetsPage() {
 	const { id } = useParams();
 
 	useEffect(() => {
-		fetch("https://www.swapi.tech/api//planets/" + id)
+		fetch("https://3000-aquamarine-mink-o3qq0p5g.ws-us16.gitpod.io/planet/" + id)
 			.then(res => {
 				return res.json();
 			})
 			.then(data => {
-				setPlanets(data.results);
+				setPlanets(data);
 			});
 	}, []);
 
