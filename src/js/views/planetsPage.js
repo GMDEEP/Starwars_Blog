@@ -32,8 +32,15 @@ export function PlanetsPage() {
 			<div className="col-sm-6">
 				<div className="card">
 					<div className="card-body">
-						<h5 className="card-title">Name</h5>
-						<p className="card-text">Hello</p>
+						<h5 className="card-title">{planets ? planets.name : "...name"}</h5>
+						<p className="card-text">{planets.diameter}</p>
+						<p className="card-text">{planets.rotation_period}</p>
+						<p className="card-text">{planets.orbital_period}</p>
+						<p className="card-text">{planets.gravity}</p>
+						<p className="card-text">{planets.population}</p>
+						<p className="card-text">{planets.climate}</p>
+						<p className="card-text">{planets.terrain}</p>
+						<p className="card-text">{planets.surface_water}</p>
 					</div>
 				</div>
 			</div>

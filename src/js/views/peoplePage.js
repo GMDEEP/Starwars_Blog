@@ -30,6 +30,12 @@ export function PeoplePage() {
 					<div className="card-body">
 						<h5 className="card-title">{person ? person.name : "...name"}</h5>
 						<p className="card-text">{person.birth_year}</p>
+						<p className="card-text">{person.eye_color}</p>
+						<p className="card-text">{person.gender}</p>
+						<p className="card-text">{person.hair_color}</p>
+						<p className="card-text">{person.height}</p>
+						<p className="card-text">{person.mass}</p>
+						<p className="card-text">{person.skin_color}</p>
 					</div>
 				</div>
 			</div>

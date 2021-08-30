@@ -32,7 +32,7 @@ export function PlanetsList() {
 									<div className="card-body">
 										<h5 className="card-title">{planets.name}</h5>
 										<p className="card-text">{planets.url}</p>
-										<a href={"/planets/" + planets.uid} className="btn btn-primary">
+										<a href={"/planets/" + planets.id} className="btn btn-primary">
 											Profile
 										</a>
 										{favorites.favoriteArray.includes(planets.name) ? (

@@ -31,8 +31,7 @@ export function VehicleList() {
 								/>
 								<div className="card-body">
 									<h5 className="card-title">{vehicle.name}</h5>
-									<p className="card-text">{vehicle.url}</p>
-									<a href={"/vehicle/" + vehicle.uid} className="btn btn-primary">
+									<a href={"/vehicle/" + vehicle.id} className="btn btn-primary">
 										Profile
 									</a>
 									{favorites.favoriteArray.includes(vehicle.name) ? (
