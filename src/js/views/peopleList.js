@@ -8,7 +8,7 @@ export function PeopleList() {
 	const favorites = useContext(FavoriteContext);
 
 	useEffect(() => {
-		fetch("https://3000-aquamarine-mink-o3qq0p5g.ws-us16.gitpod.io/people")
+		fetch("https://3000-aquamarine-mink-o3qq0p5g.ws-us15.gitpod.io/people")
 			.then(res => {
 				return res.json();
 			})

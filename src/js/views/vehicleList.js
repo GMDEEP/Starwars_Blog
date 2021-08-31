@@ -8,7 +8,7 @@ export function VehicleList() {
 	const favorites = useContext(FavoriteContext);
 
 	useEffect(() => {
-		fetch("https://3000-aquamarine-mink-o3qq0p5g.ws-us16.gitpod.io/vehicle")
+		fetch("https://3000-aquamarine-mink-o3qq0p5g.ws-us15.gitpod.io/vehicle")
 			.then(res => {
 				return res.json();
 			})

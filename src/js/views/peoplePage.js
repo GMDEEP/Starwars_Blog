@@ -7,7 +7,7 @@ export function PeoplePage() {
 	const { id } = useParams();
 
 	useEffect(() => {
-		fetch("https://3000-aquamarine-mink-o3qq0p5g.ws-us16.gitpod.io/people/" + id)
+		fetch("https://3000-aquamarine-mink-o3qq0p5g.ws-us15.gitpod.io/people/" + id)
 			.then(res => {
 				return res.json();
 			})

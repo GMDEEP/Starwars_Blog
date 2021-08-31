@@ -7,7 +7,7 @@ export function PlanetsPage() {
 	const { id } = useParams();
 
 	useEffect(() => {
-		fetch("https://3000-aquamarine-mink-o3qq0p5g.ws-us16.gitpod.io/planet/" + id)
+		fetch("https://3000-aquamarine-mink-o3qq0p5g.ws-us15.gitpod.io/planet/" + id)
 			.then(res => {
 				return res.json();
 			})

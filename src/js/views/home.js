@@ -2,49 +2,48 @@ import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
-import { PeopleList } from "./peopleList";
-import { PlanetsList } from "./planetsList";
-import { VehicleList } from "./vehicleList";
+import { Link } from "react-router-dom";
 
 export const Home = () => (
 	<Carousel fade>
 		<Carousel.Item>
 			<img
-				className="d-block w-100"
-				src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwallpaperaccess.com%2Fstar-wars-characters&psig=AOvVaw0091pC-UvGJUhPiagXIqMQ&ust=1630440020677000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKj_ocfE2fICFQAAAAAdAAAAABAD"
+				className="d-block carouselImg"
+				src="https://res.cloudinary.com/djwr65ikt/image/upload/v1630434385/368503_oz3s3i.jpg"
 				alt="First slide"
 			/>
-			<Carousel.Caption>
-				<h5>CHARACTERS OF THE GALAXY</h5>
-				<p>SOMEWHERE FAR, FAR AWAY TO THE COMFORT OF EARTH</p>
-				<PeopleList />
-			</Carousel.Caption>
+			<Link to="/people">
+				<Carousel.Caption>
+					<h5>CHARACTERS OF THE GALAXY</h5>
+					<p>SOMEWHERE FAR, FAR AWAY TO THE COMFORT OF EARTH</p>
+				</Carousel.Caption>
+			</Link>
 		</Carousel.Item>
 		<Carousel.Item>
 			<img
-				className="d-block w-100"
-				src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.wallpapersafari.com%2F91%2F48%2FYxkc6s.jpg&imgrefurl=https%3A%2F%2Fwallpapersafari.com%2Fw%2FYxkc6s&tbnid=96tT51r_uclGeM&vet=12ahUKEwiD5sOPytnyAhWVjuAKHRLZDDUQMygQegUIARDEAQ..i&docid=ZqpR1JiabM_CKM&w=1920&h=1080&q=star%20wars%20planets%20wallpaper%204k&ved=2ahUKEwiD5sOPytnyAhWVjuAKHRLZDDUQMygQegUIARDEAQ"
+				className="d-block carouselImg"
+				src="https://res.cloudinary.com/djwr65ikt/image/upload/v1630434753/star-wars-star-wars-the-fallen-order-planet-digital-art-artwork-hd-wallpaper-preview_poejdb.jpg"
 				alt="Second slide"
 			/>
-
-			<Carousel.Caption>
-				<h5>PLANETS FAR, FAR AWAY</h5>
-				<p>THERE MAY BE MORE EARTH-LIKE PLANETS THAN GRAINS OF SAND ON ALL OUR BEACHES</p>
-				<PlanetsList />
-			</Carousel.Caption>
+			<Link to="/planets">
+				<Carousel.Caption>
+					<h5>PLANETS FAR, FAR AWAY</h5>
+					<p>THERE MAY BE MORE EARTH-LIKE PLANETS THAN GRAINS OF SAND ON ALL OUR BEACHES</p>
+				</Carousel.Caption>
+			</Link>
 		</Carousel.Item>
 		<Carousel.Item>
 			<img
-				className="d-block w-100"
-				src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwallpapersden.com%2Fstar-wars-spaceship-8k-wallpaper%2F1242x2688%2F&psig=AOvVaw0yA2g2NGNlW6GStK3kwl7D&ust=1630441663248000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOjPudXK2fICFQAAAAAdAAAAABAD"
+				className="d-block carouselImg"
+				src="https://res.cloudinary.com/djwr65ikt/image/upload/v1630434944/ea1097a6ee800831b32c0e94ab9e6818_hywrnq.jpg"
 				alt="Third slide"
 			/>
-
-			<Carousel.Caption>
-				<h3>SPACECRAFT FROM ANOTHER DIMENSION</h3>
-				<p>TRAVELING AT LIGHTSPEED OR WARPING SPACE AND TIME WHO REALLY KNOWS</p>
-				<VehicleList />
-			</Carousel.Caption>
+			<Link to="/vehicle">
+				<Carousel.Caption>
+					<h5>SPACECRAFT FROM ANOTHER DIMENSION</h5>
+					<p>TRAVELING AT LIGHTSPEED OR WARPING SPACE AND TIME WHO REALLY KNOWS</p>
+				</Carousel.Caption>
+			</Link>
 		</Carousel.Item>
 	</Carousel>
 );
