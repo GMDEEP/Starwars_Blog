@@ -1,6 +1,5 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
 import { Link } from "react-router-dom";
 
